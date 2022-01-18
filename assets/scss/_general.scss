@@ -4,3 +4,45 @@
   margin: 0;
   text-decoration: none;
 }
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url(../fonts/UbuntuMono-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Ubuntu Bold";
+  src: url(../fonts/UbuntuMono-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Hind";
+  src: url(../fonts/HindGuntur-Regular.ttf);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Ubuntu";
+}
+
+p,
+li,
+a {
+  font-family: "Hind";
+}
+
+.btn {
+  padding: 0.5em 1em;
+  border: $primaryColor 2px solid;
+  border-radius: 10px;
+}
+
+h2 > span {
+  color: $primaryColor;
+}
+
+h2 {
+  font-weight: 300;
+}

@@ -1,0 +1,18 @@
+footer {
+  margin-top: 2em;
+  ul {
+    @include flex;
+    gap: 2em;
+    i {
+      font-size: 45px;
+      color: $thirdColor;
+    }
+  }
+  p {
+    text-align: center;
+    font-size: 14px;
+    color: $thirdColor;
+    width: 80%;
+    margin: auto;
+  }
+}

@@ -1,7 +1,244 @@
-#competences {
-  #competencesContainer {
-    img {
-      width: 80px;
+body {
+  color: white;
+  background-color: $secondaryColor;
+}
+
+#introduction {
+  //On crée l'espace nécessaire à l'aération du texte
+  padding: 6%;
+  margin-top: 1em;
+  p:first-of-type {
+    font-size: 14px;
+  }
+  //On stylise le titre
+  h1 {
+    font-family: "Ubuntu Bold";
+    font-size: 36px;
+    letter-spacing: 5px;
+    span {
+      padding-top: 10px;
+      letter-spacing: 0px;
+      font-size: 20px;
+      display: block;
+      color: $thirdColor;
     }
+  }
+  //Texte d'introduction
+  p {
+    padding-top: 1em;
+    font-size: 16px;
+    span {
+      color: $primaryColor;
+    }
+  }
+  //Chevron du bas
+  i {
+    padding-top: 1em;
+    display: block;
+    margin: auto;
+    font-size: 50px;
+    text-align: center;
+    color: $primaryColor;
+  }
+}
+
+#aPropos {
+  margin-top: 2em;
+  padding: 6%;
+  h2 {
+    text-align: center;
+  }
+  p {
+    padding-top: 2em;
+    text-align: center;
+    span {
+      color: $primaryColor;
+    }
+  }
+}
+
+#competences {
+  position: relative;
+  margin-top: 1em;
+  h2 {
+    text-align: center;
+  }
+  p {
+    width: min-content;
+    margin: auto;
+    border-bottom: 2px solid $primaryColor;
+  }
+  #competencesContainer {
+    position: relative;
+    margin-top: 2em;
+    img {
+      width: 20%;
+    }
+    @include flex;
+    gap: 2%;
+    padding-bottom: 1em;
+    #competence1,
+    #competence5 {
+      width: 10%;
+    }
+    #competence2,
+    #competence4 {
+      width: 15%;
+    }
+    #competence3 {
+      width: 20%;
+    }
+  }
+  i {
+    position: absolute;
+    bottom: 0;
+    font-size: 32px;
+    color: $primaryColor;
+  }
+  i:first-of-type {
+    right: 20%;
+  }
+  i:last-of-type {
+    left: 20%;
+  }
+}
+
+#parcours {
+  margin-top: 3em;
+  h2 {
+    text-align: center;
+    margin-bottom: 2em;
+  }
+  span {
+    color: $primaryColor;
+  }
+  .btn {
+    color: $primaryColor;
+    display: block;
+    width: 90px;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 0.2em;
+  }
+  #parcoursContainer {
+    position: relative;
+    #friseChronologique {
+      position: absolute;
+      width: 2px;
+      height: 100%;
+      background-color: black;
+      margin-right: 2em;
+      left: 15%;
+    }
+    #texteAnnee {
+      margin-left: 25%;
+      padding-right: 5%;
+      article {
+        margin-bottom: 3em;
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background-color: $thirdColor;
+          top: 30%;
+          left: -15.8%;
+        }
+        p:nth-of-type(2) {
+          color: $thirdColor;
+        }
+        p:first-of-type {
+          position: absolute;
+          left: -32%;
+          width: 34px;
+          top: 28%;
+        }
+      }
+      h3 {
+        font-weight: 300;
+      }
+    }
+  }
+}
+
+#projet {
+  margin-top: 4em;
+  h2 {
+    text-align: center;
+    margin-bottom: 2em;
+  }
+  #chaletEtCaviar {
+    background-image: url("../images/ImageDuSiteChaletEtCavier.png");
+    background-size: contain;
+  }
+  #rocketCom {
+    background-image: url("../images/ImageDuSiteRocket'Com.png");
+    background-size: 140%;
+    background-repeat: no-repeat;
+  }
+  #gbaf {
+    background-image: url("../images/ImageDuSiteGBAF.png");
+    background-size: contain;
+  }
+  article {
+    text-align: center;
+    width: 90%;
+    height: 270px;
+    margin: 6em auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    border-bottom: black 1px solid;
+    #textProjet {
+      background-color: #0f3040;
+    }
+    ul {
+      @include flex;
+      gap: 10%;
+      font-size: 12px;
+      li {
+        list-style: circle;
+      }
+    }
+    .btn {
+      position: absolute;
+      bottom: -25%;
+      left: 31%;
+      color: $primaryColor;
+      width: 25%;
+      padding: 0.2em 1em;
+    }
+  }
+  > a {
+    color: $primaryColor;
+    margin: auto;
+    display: block;
+    width: 20%;
+    padding-bottom: 0.2em;
+    border-width: 1px;
+  }
+}
+
+#contact {
+  margin-top: 6em;
+  h2 {
+    text-align: center;
+    margin-bottom: 2em;
+  }
+  p {
+    text-align: center;
+    padding: 0 6%;
+    margin-bottom: 2em;
+  }
+  a {
+    display: block;
+    width: 40%;
+    padding-bottom: 0.2em;
+    text-align: center;
+    color: $primaryColor;
+    margin: auto;
   }
 }

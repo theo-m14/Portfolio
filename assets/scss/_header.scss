@@ -1,11 +1,19 @@
 header {
   @include flex($just: space-between);
   img {
-    width: 116px;
+    width: 80px;
   }
   ul {
     @include flex;
     padding: 1em;
-    gap: 2%;
+    width: 45%;
+    gap: 5%;
+    display: none;
+    span {
+      color: $primaryColor;
+    }
+    a {
+      color: $primaryColor;
+    }
   }
 }
