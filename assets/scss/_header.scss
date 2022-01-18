@@ -1,0 +1,11 @@
+header {
+  @include flex($just: space-between);
+  img {
+    width: 116px;
+  }
+  ul {
+    @include flex;
+    padding: 1em;
+    gap: 2%;
+  }
+}

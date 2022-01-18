@@ -5,4 +5,24 @@
   text-decoration: none;
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header img {
+  width: 116px;
+}
+header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  gap: 2%;
+}
+
+#competences #competencesContainer img {
+  width: 80px;
+}
+
 /*# sourceMappingURL=style.css.map */
