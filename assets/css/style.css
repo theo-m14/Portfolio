@@ -52,14 +52,6 @@ h2 {
   font-weight: 300;
 }
 
-@keyframes showImage {
-  from {
-    background-color: #41ead48d;
-  }
-  to {
-    background-color: #41ead400;
-  }
-}
 header {
   display: flex;
   justify-content: space-between;
@@ -162,10 +154,10 @@ body {
   width: 100%;
   height: 100%;
   background-color: #41ead48d;
+  transition: all 400ms ease-in-out;
 }
-#aPropos #pathPhoto:hover .filtreBleu {
+#aPropos #pathPhoto .filtreBleu:hover {
   background-color: #41ead400;
-  animation: showImage 0.5s ease-in-out;
 }
 #aPropos #pathBorder {
   position: absolute;

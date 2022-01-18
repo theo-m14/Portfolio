@@ -78,11 +78,9 @@ body {
       width: 100%;
       height: 100%;
       background-color: #41ead48d;
-    }
-    &:hover {
-      .filtreBleu {
+      transition: all 400ms ease-in-out;
+      &:hover {
         background-color: #41ead400;
-        animation: showImage 0.5s ease-in-out;
       }
     }
   }
