@@ -39,6 +39,10 @@ body {
     font-size: 50px;
     text-align: center;
     color: $primaryColor;
+    transition: all 0.5s ease;
+    &:hover {
+      transform: translateY(7%);
+    }
   }
 }
 
@@ -142,12 +146,19 @@ body {
     bottom: 0;
     font-size: 32px;
     color: $primaryColor;
+    transition: all 0.5s ease;
   }
   i:first-of-type {
     right: 20%;
+    &:hover {
+      transform: translateX(10%);
+    }
   }
   i:last-of-type {
     left: 20%;
+    &:hover {
+      transform: translateX(-10%);
+    }
   }
 }
 
@@ -161,7 +172,6 @@ body {
     color: $primaryColor;
   }
   .btn {
-    color: $primaryColor;
     display: block;
     width: 90px;
     text-align: center;
@@ -253,14 +263,12 @@ body {
       }
     }
     .btn {
-      color: $primaryColor;
       width: 25%;
       max-width: 110px;
       padding: 0.2em 1em;
     }
   }
   > a {
-    color: $primaryColor;
     margin: 2em auto;
     display: block;
     width: 20%;
@@ -289,5 +297,6 @@ body {
     text-align: center;
     color: $primaryColor;
     margin: auto;
+    max-width: 210px;
   }
 }

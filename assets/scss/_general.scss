@@ -37,6 +37,13 @@ a {
   padding: 0.5em 1em;
   border: $primaryColor 2px solid;
   border-radius: 10px;
+  color: $primaryColor;
+  transition: all 0.5s ease-in-out;
+  &:hover {
+    background-color: $primaryColor;
+    color: $secondaryColor;
+    font-weight: bold;
+  }
 }
 
 h2 > span {
