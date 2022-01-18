@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   list-style: none;
   padding: 0;
@@ -44,6 +45,14 @@ h2 {
   font-weight: 300;
 }
 
+@keyframes showImage {
+  from {
+    background-color: #41ead48d;
+  }
+  to {
+    background-color: #41ead400;
+  }
+}
 header {
   display: flex;
   justify-content: space-between;
@@ -109,6 +118,7 @@ body {
 }
 
 #aPropos {
+  position: relative;
   margin-top: 2em;
   padding: 6%;
 }
@@ -118,14 +128,56 @@ body {
 #aPropos p {
   padding-top: 2em;
   text-align: center;
+  padding-bottom: 2.5em;
 }
 #aPropos p span {
   color: #41ead4;
 }
+#aPropos #pathPhoto {
+  position: absolute;
+  bottom: 0px;
+  left: calc(50% - 100px);
+  background-image: url(../images/photoThéo.jpg);
+  background-size: cover;
+  clip-path: polygon(16% 0, 100% 0%, 84% 100%, 0% 100%);
+  background-position: center;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  z-index: 1;
+  background-color: rgba(210, 105, 30, 0.564);
+}
+#aPropos #pathPhoto .filtreBleu {
+  width: 100%;
+  height: 100%;
+  background-color: #41ead48d;
+}
+#aPropos #pathPhoto:hover .filtreBleu {
+  background-color: #41ead400;
+  animation: showImage 0.5s ease-in-out;
+}
+#aPropos #pathBorder {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  bottom: 50px;
+  left: calc(50% - 80px);
+  clip-path: polygon(16% 0, 100% 0%, 84% 100%, 0% 100%);
+  background-color: #41ead4;
+}
+#aPropos #pathBorder #pathBackground {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 196px;
+  height: 196px;
+  background-color: #052839;
+  clip-path: polygon(16% 0, 100% 0%, 84% 100%, 0% 100%);
+}
 
 #competences {
   position: relative;
-  margin-top: 1em;
+  margin-top: 5em;
 }
 #competences h2 {
   text-align: center;
@@ -137,7 +189,7 @@ body {
 }
 #competences #competencesContainer {
   position: relative;
-  margin-top: 2em;
+  margin-top: 5em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -150,13 +202,16 @@ body {
 #competences #competencesContainer #competence1,
 #competences #competencesContainer #competence5 {
   width: 10%;
+  max-width: 78px;
 }
 #competences #competencesContainer #competence2,
 #competences #competencesContainer #competence4 {
   width: 15%;
+  max-width: 117px;
 }
 #competences #competencesContainer #competence3 {
   width: 20%;
+  max-width: 156px;
 }
 #competences i {
   position: absolute;
@@ -172,7 +227,7 @@ body {
 }
 
 #parcours {
-  margin-top: 3em;
+  margin-top: 5em;
 }
 #parcours h2 {
   text-align: center;
@@ -254,8 +309,9 @@ body {
 #projet article {
   text-align: center;
   width: 90%;
+  max-width: 478px;
   height: 270px;
-  margin: 6em auto;
+  margin: 2em auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -276,20 +332,20 @@ body {
   list-style: circle;
 }
 #projet article .btn {
-  position: absolute;
-  bottom: -25%;
-  left: 31%;
   color: #41ead4;
   width: 25%;
+  max-width: 110px;
   padding: 0.2em 1em;
 }
 #projet > a {
   color: #41ead4;
-  margin: auto;
+  margin: 2em auto;
   display: block;
   width: 20%;
+  max-width: 190px;
   padding-bottom: 0.2em;
   border-width: 1px;
+  text-align: center;
 }
 
 #contact {

@@ -43,6 +43,7 @@ body {
 }
 
 #aPropos {
+  position: relative;
   margin-top: 2em;
   padding: 6%;
   h2 {
@@ -54,12 +55,56 @@ body {
     span {
       color: $primaryColor;
     }
+    padding-bottom: 2.5em;
+  }
+  #pathPhoto {
+    position: absolute;
+    bottom: 0px;
+    left: calc(50% - 100px);
+    background-image: url(../images/photoThéo.jpg);
+    background-size: cover;
+    clip-path: polygon(16% 0, 100% 0%, 84% 100%, 0% 100%);
+    background-position: center;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    z-index: 1;
+    background-color: rgba(210, 105, 30, 0.564);
+    .filtreBleu {
+      width: 100%;
+      height: 100%;
+      background-color: #41ead48d;
+    }
+    &:hover {
+      .filtreBleu {
+        background-color: #41ead400;
+        animation: showImage 0.5s ease-in-out;
+      }
+    }
+  }
+  #pathBorder {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    bottom: 50px;
+    left: calc(50% - 80px);
+    clip-path: polygon(16% 0, 100% 0%, 84% 100%, 0% 100%);
+    background-color: $primaryColor;
+    #pathBackground {
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      width: 196px;
+      height: 196px;
+      background-color: $secondaryColor;
+      clip-path: polygon(16% 0, 100% 0%, 84% 100%, 0% 100%);
+    }
   }
 }
 
 #competences {
   position: relative;
-  margin-top: 1em;
+  margin-top: 5em;
   h2 {
     text-align: center;
   }
@@ -70,7 +115,7 @@ body {
   }
   #competencesContainer {
     position: relative;
-    margin-top: 2em;
+    margin-top: 5em;
     img {
       width: 20%;
     }
@@ -80,13 +125,16 @@ body {
     #competence1,
     #competence5 {
       width: 10%;
+      max-width: 78px;
     }
     #competence2,
     #competence4 {
       width: 15%;
+      max-width: 117px;
     }
     #competence3 {
       width: 20%;
+      max-width: 156px;
     }
   }
   i {
@@ -104,7 +152,7 @@ body {
 }
 
 #parcours {
-  margin-top: 3em;
+  margin-top: 5em;
   h2 {
     text-align: center;
     margin-bottom: 2em;
@@ -185,8 +233,9 @@ body {
   article {
     text-align: center;
     width: 90%;
+    max-width: 478px;
     height: 270px;
-    margin: 6em auto;
+    margin: 2em auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -204,21 +253,21 @@ body {
       }
     }
     .btn {
-      position: absolute;
-      bottom: -25%;
-      left: 31%;
       color: $primaryColor;
       width: 25%;
+      max-width: 110px;
       padding: 0.2em 1em;
     }
   }
   > a {
     color: $primaryColor;
-    margin: auto;
+    margin: 2em auto;
     display: block;
     width: 20%;
+    max-width: 190px;
     padding-bottom: 0.2em;
     border-width: 1px;
+    text-align: center;
   }
 }
 
