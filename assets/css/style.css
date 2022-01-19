@@ -186,6 +186,7 @@ body {
 }
 #competences h2 {
   text-align: center;
+  margin-bottom: 10em;
 }
 #competences p {
   width: min-content;
@@ -203,20 +204,40 @@ body {
 }
 #competences #competencesContainer img {
   width: 20%;
+  position: absolute;
+  transition: all 1s ease-in-out;
 }
 #competences #competencesContainer #competence1,
 #competences #competencesContainer #competence5 {
   width: 10%;
   max-width: 78px;
+  z-index: 1;
 }
 #competences #competencesContainer #competence2,
 #competences #competencesContainer #competence4 {
   width: 15%;
   max-width: 117px;
+  z-index: 2;
 }
 #competences #competencesContainer #competence3 {
   width: 20%;
   max-width: 156px;
+  z-index: 3;
+}
+#competences #competencesContainer #competence1 {
+  transform: translate(-380%, -50%);
+}
+#competences #competencesContainer #competence2 {
+  transform: translate(-150%, -50%);
+}
+#competences #competencesContainer #competence3 {
+  transform: translate(0%, -40%);
+}
+#competences #competencesContainer #competence4 {
+  transform: translate(150%, -50%);
+}
+#competences #competencesContainer #competence5 {
+  transform: translate(380%, -50%);
 }
 #competences i {
   position: absolute;

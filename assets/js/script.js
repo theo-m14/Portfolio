@@ -33,3 +33,61 @@ getBtnParcours.addEventListener('click', function(e){
     //On actualise la dernière année affiché
     getLastAnnee = document.querySelectorAll('#texteAnnee article p:first-of-type')[document.querySelectorAll('#texteAnnee article p:first-of-type').length-1].innerText;
 });
+
+//Partie compétence
+let getArrowLeft = document.getElementsByClassName('fa-chevron-circle-left')[0];
+let getArrowRight = document.getElementsByClassName('fa-chevron-circle-right')[0];
+let getAllCompetence = document.querySelectorAll('#competencesContainer img');
+let displayCompetenceText = document.getElementById('nomCompetence');
+
+//Changement compétence
+getArrowLeft.addEventListener('click',function(){
+    for(image in getAllCompetence){
+        let id = getAllCompetence[image].id;
+        switch (id){
+            case 'competence1':
+                getAllCompetence[image].id = 'competence5';
+                break;
+            case 'competence2':
+                getAllCompetence[image].id = 'competence1';
+                break;
+            case 'competence3':
+                getAllCompetence[image].id = 'competence2';
+                break;
+            case 'competence4':
+                getAllCompetence[image].id = 'competence3';
+                displayCompetenceText.innerText = getAllCompetence[image].alt;
+                break;
+            case 'competence5':
+                getAllCompetence[image].id = 'competence4';
+                break;
+            default:
+        }
+    }
+})
+
+getArrowRight.addEventListener('click',function(){
+    for(image in getAllCompetence){
+        let id = getAllCompetence[image].id;
+        switch (id){
+            case 'competence1':
+                getAllCompetence[image].id = 'competence2';
+                break;
+            case 'competence2':
+                getAllCompetence[image].id = 'competence3';
+                displayCompetenceText.innerText = getAllCompetence[image].alt;
+                break;
+            case 'competence3':
+                getAllCompetence[image].id = 'competence4';
+                break;
+            case 'competence4':
+                getAllCompetence[image].id = 'competence5';
+                break;
+            case 'competence5':
+                getAllCompetence[image].id = 'competence1';
+
+                break;
+            default:
+        }
+    }
+})

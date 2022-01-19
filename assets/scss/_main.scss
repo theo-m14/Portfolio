@@ -108,6 +108,7 @@ body {
   margin-top: 5em;
   h2 {
     text-align: center;
+    margin-bottom: 10em;
   }
   p {
     width: min-content;
@@ -119,6 +120,8 @@ body {
     margin-top: 5em;
     img {
       width: 20%;
+      position: absolute;
+      transition: all 1s ease-in-out;
     }
     @include flex;
     gap: 2%;
@@ -127,15 +130,33 @@ body {
     #competence5 {
       width: 10%;
       max-width: 78px;
+      z-index: 1;
     }
     #competence2,
     #competence4 {
       width: 15%;
       max-width: 117px;
+      z-index: 2;
     }
     #competence3 {
       width: 20%;
       max-width: 156px;
+      z-index: 3;
+    }
+    #competence1{
+      transform: translate(-380%,-50%);
+    }
+    #competence2{
+      transform: translate(-150%,-50%);
+    }
+    #competence3{
+      transform: translate(0%,-40%);
+    }
+    #competence4{
+      transform: translate(150%,-50%);
+    }
+    #competence5{
+      transform: translate(380%,-50%);
     }
   }
   i {
