@@ -62,7 +62,6 @@ body {
     padding-bottom: 2.5em;
   }
   #pathPhoto {
-    position: absolute;
     bottom: 0px;
     left: calc(50% - 100px);
     background-image: url(../images/photoThéo.jpg);
@@ -227,22 +226,22 @@ body {
   }
   #chaletEtCaviar {
     background-image: url("../images/ImageDuSiteChaletEtCavier.png");
-    background-size: contain;
   }
   #rocketCom {
     background-image: url("../images/ImageDuSiteRocket'Com.png");
-    background-size: 140%;
-    background-repeat: no-repeat;
   }
   #gbaf {
     background-image: url("../images/ImageDuSiteGBAF.png");
-    background-size: contain;
+    
   }
   article {
+    background-size: 200%;
+    background-repeat: no-repeat;
     text-align: center;
     width: 90%;
-    max-width: 478px;
-    height: 270px;
+    max-width: 420px;
+    height: 80vw;
+    max-height: 400px;
     margin: 2em auto;
     display: flex;
     flex-direction: column;
@@ -251,6 +250,9 @@ body {
     border-bottom: black 1px solid;
     #textProjet {
       background-color: #0f3040;
+      a{
+        display: none
+      }
     }
     ul {
       @include flex;
@@ -260,6 +262,9 @@ body {
         list-style: circle;
       }
     }
+  }
+  #projetContainer{
+    text-align: center;
     .btn {
       width: 25%;
       max-width: 110px;
@@ -293,7 +298,6 @@ body {
     width: 40%;
     padding-bottom: 0.2em;
     text-align: center;
-    color: $primaryColor;
     margin: auto;
     max-width: 210px;
   }

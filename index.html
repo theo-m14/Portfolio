@@ -13,13 +13,15 @@
 <body>
     <header>
         <img src="assets/images/Logo.svg" alt="Logo de Michel Théo">
-        <ul>
-            <li><a href="#introduction"><span>/.</span> À propos</a></li>
-            <li><a href="#competences"><span>/.</span> Compétences</a></li>
-            <li><a href="#parcours"></a><span>/.</span> Mon parcours</li>
-            <li><a href="#contact"><span>/.</span> Contact</a></li>
-            <li><a href="assets/file/CV-MichelThéo11-2021.pdf" target="_blank" class="btn">Mon CV</a></li>
-        </ul>
+        <nav>
+            <ul>
+                <li><a href="#introduction"><span>/.</span> À propos</a></li>
+                <li><a href="#competences"><span>/.</span> Compétences</a></li>
+                <li><a href="#parcours"></a><span>/.</span> Mon parcours</li>
+                <li><a href="#contact"><span>/.</span> Contact</a></li>
+                <li><a href="assets/file/CV-MichelThéo11-2021.pdf" target="_blank" class="btn">Mon CV</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
         <section id="introduction">
@@ -30,13 +32,17 @@
             <i class="fas fa-chevron-circle-down"></i>
         </section>
         <section id="aPropos">
-            <h2><span>/.</span> À propos</h2>
-            <p>Je m’appelle Théo et j’ai 22 ans. Je m’intèresse à la programmation depuis un petit moment déjà et ne cesse de vouloir progresser dans ce milieu. Je dirais que mon plus grand point fort est ma soif d’<span>apprendre</span> et de <span>progresser</span>. Je suis quelqu’un de <span>curieux</span>, ce qui fait de deux atouts majeurs nécessaires dans ce milieu. Je souhaite continuer dans ce milieu et j’ai hâte de voir où cela me mênera</p>
-            <div id="pathPhoto">
-                <div class="filtreBleu"></div>
+            <div id="aProposTexte">
+                <h2><span>/.</span> À propos</h2>
+                <p>Je m’appelle Théo et j’ai 22 ans. Je m’intèresse à la programmation depuis un petit moment déjà et ne cesse de vouloir progresser dans ce milieu. Je dirais que mon plus grand point fort est ma soif d’<span>apprendre</span> et de <span>progresser</span>. Je suis quelqu’un de <span>curieux</span>, ce qui fait de deux atouts majeurs nécessaires dans ce milieu. Je souhaite continuer dans ce domaine et j’ai hâte de voir où cela me mênera</p>
             </div>
-            <div id="pathBorder">
-                <div id="pathBackground"></div>
+            <div id="aProposPhoto">
+                <div id="pathPhoto">
+                    <div class="filtreBleu"></div>
+                </div>
+                <div id="pathBorder">
+                    <div id="pathBackground"></div>
+                </div>
             </div>
         </section>
         <section id="competences">
@@ -100,43 +106,48 @@
         </section>
         <section id="projet">
             <h2><span>./</span> Mes Projets</h2>
-            <article id="chaletEtCaviar">
-                <div id="textProjet">
-                    <h4>Chalet Et Caviar</h4>
-                    <p>Site WordPress réalisé dans le cadre d’un projet OpenClassrooms. Site factice de vente et de location de chalet.</p>
-                    <ul>
-                        <li>WordPress</li>
-                    </ul>
-                </div>
-            </article>
-            <article id="rocketCom">
-                <div id="textProjet">
-                    <h4>Rocket'Com</h4>
-                    <p>Site Vitrine d’une entreprise factice de communication digitale</p>
-                    <ul>
-                        <li>HTML5</li>
-                        <li>CSS3</li>
-                        <li>SASS</li>
-                        <li>JS</li>
-                        <li>GIT</li>
-                    </ul>
-                </div>
-            </article>
-            <a href="#" class="btn">Lien</a>
-            <article id="gbaf">
-                <div id="textProjet">
-                    <h4>GBAF</h4>
-                    <p>Réalisation d’un extranet d’acteur bancaires dans la cadre d’un projet OpenClassrooms</p>
-                    <ul>
-                        <li>HTML5</li>
-                        <li>CSS3</li>
-                        <li>PHP</li>
-                        <li>MySQL</li>
-                        <li>GIT</li>
-                    </ul>
-                </div>
-            </article>
-            <a href="#" class="btn">Lien</a>
+            <div id="projetContainer">
+                <article id="chaletEtCaviar">
+                    <div class="filtreBleu"></div>
+                    <div id="textProjet">
+                        <h4>Chalet Et Caviar</h4>
+                        <p>Site WordPress réalisé dans le cadre d’un projet OpenClassrooms. Site factice de vente et de location de chalet.</p>
+                        <ul>
+                            <li>WordPress</li>
+                        </ul>
+                    </div>
+                </article>
+                <article id="rocketCom">
+                    <div class="filtreBleu"></div>
+                    <div id="textProjet">
+                        <h4>Rocket'Com</h4>
+                        <p>Site Vitrine d’une entreprise factice de communication digitale. <a href="#">Lien</a></p>
+                        <ul>
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>SASS</li>
+                            <li>JS</li>
+                            <li>GIT</li>
+                        </ul>
+                    </div>
+                </article>
+                <a href="#" class="btn">Lien</a>
+                <article id="gbaf">
+                    <div class="filtreBleu"></div>
+                    <div id="textProjet">
+                        <h4>GBAF</h4>
+                        <p>Réalisation d’un extranet d’acteur bancaires dans la cadre d’un projet OpenClassrooms <a href="#">Lien</a></p>
+                        <ul>
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>PHP</li>
+                            <li>MySQL</li>
+                            <li>GIT</li>
+                        </ul>
+                    </div>
+                </article>
+                <a href="#" class="btn">Lien</a>
+            </div>
             <a href="#" class="btn">Voir plus</a>
         </section>
         <section id="contact">
@@ -152,7 +163,7 @@
             <li><a href="https://www.linkedin.com/in/theo-michel/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
             <li><a href="https://github.com/theo-m14/" target="_blank"><i class="fab fa-github-square"></i></a></li>
         </ul>
-        <p>Designé et Coder par MICHEL Théo - Copyright 2022</p>
+        <p>Designé et Codé par MICHEL Théo - Copyright 2022</p>
     </footer>
 </body>
 </html>

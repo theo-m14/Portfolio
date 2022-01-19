@@ -68,8 +68,7 @@ header ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1em;
-  width: 45%;
+  padding: 1em 0;
   gap: 5%;
   display: none;
 }
@@ -77,7 +76,7 @@ header ul span {
   color: #41ead4;
 }
 header ul a {
-  color: #41ead4;
+  color: white;
 }
 
 body {
@@ -141,7 +140,6 @@ body {
   color: #41ead4;
 }
 #aPropos #pathPhoto {
-  position: absolute;
   bottom: 0px;
   left: calc(50% - 100px);
   background-image: url(../images/photoThéo.jpg);
@@ -308,22 +306,21 @@ body {
 }
 #projet #chaletEtCaviar {
   background-image: url("../images/ImageDuSiteChaletEtCavier.png");
-  background-size: contain;
 }
 #projet #rocketCom {
   background-image: url("../images/ImageDuSiteRocket'Com.png");
-  background-size: 140%;
-  background-repeat: no-repeat;
 }
 #projet #gbaf {
   background-image: url("../images/ImageDuSiteGBAF.png");
-  background-size: contain;
 }
 #projet article {
+  background-size: 200%;
+  background-repeat: no-repeat;
   text-align: center;
   width: 90%;
-  max-width: 478px;
-  height: 270px;
+  max-width: 420px;
+  height: 80vw;
+  max-height: 400px;
   margin: 2em auto;
   display: flex;
   flex-direction: column;
@@ -333,6 +330,9 @@ body {
 }
 #projet article #textProjet {
   background-color: #0f3040;
+}
+#projet article #textProjet a {
+  display: none;
 }
 #projet article ul {
   display: flex;
@@ -344,7 +344,10 @@ body {
 #projet article ul li {
   list-style: circle;
 }
-#projet article .btn {
+#projet #projetContainer {
+  text-align: center;
+}
+#projet #projetContainer .btn {
   width: 25%;
   max-width: 110px;
   padding: 0.2em 1em;
@@ -376,7 +379,6 @@ body {
   width: 40%;
   padding-bottom: 0.2em;
   text-align: center;
-  color: #41ead4;
   margin: auto;
   max-width: 210px;
 }
@@ -400,6 +402,159 @@ footer p {
   color: #8d99ae;
   width: 80%;
   margin: auto;
+}
+
+@media screen and (min-width: 1024px) {
+  header img {
+    width: 116px;
+  }
+  header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    width: 70vw;
+  }
+
+  main {
+    padding-left: 40px;
+  }
+
+  #introduction h1 {
+    font-size: 45px;
+  }
+  #introduction h1 span {
+    font-size: 32px;
+  }
+  #introduction p:last-of-type {
+    width: 65%;
+  }
+
+  #aPropos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #aPropos #aProposTexte {
+    order: 2;
+    width: 60%;
+    margin-left: 4em;
+    padding-right: 3em;
+  }
+  #aPropos h2 {
+    text-align: right;
+  }
+  #aPropos p {
+    text-align: right;
+  }
+  #aPropos #pathPhoto {
+    order: 1;
+  }
+  #aPropos #pathBorder {
+    left: 110px;
+    top: 120px;
+  }
+
+  #competences i {
+    font-size: 42px;
+  }
+  #competences p {
+    font-size: 24px;
+  }
+
+  #contact p {
+    width: 52%;
+    margin: 2em auto;
+  }
+
+  footer ul {
+    position: fixed;
+    left: 1%;
+    bottom: 10%;
+    flex-direction: column;
+    gap: 1em;
+  }
+  footer ul::after {
+    content: "";
+    width: 2px;
+    height: 300px;
+    bottom: -110%;
+    background-color: #8d99ae;
+    position: absolute;
+  }
+}
+@media screen and (min-width: 1420px) {
+  header ul {
+    width: 40vw;
+    padding-right: 1em;
+  }
+
+  #introduction p:last-of-type {
+    width: 50%;
+  }
+
+  #aPropos {
+    justify-content: space-evenly;
+  }
+  #aPropos h2 {
+    margin-bottom: 1em;
+  }
+  #aPropos #aProposTexte {
+    padding-right: 1em;
+    width: 40%;
+  }
+  #aPropos #pathPhoto {
+    width: 300px;
+    height: 300px;
+  }
+  #aPropos #pathBorder {
+    width: 300px;
+    height: 300px;
+    top: 5%;
+    left: 15%;
+  }
+  #aPropos #pathBorder #pathBackground {
+    width: 296px;
+    height: 296px;
+  }
+
+  #projet #projetContainer {
+    display: flex;
+  }
+  #projet .btn {
+    display: none;
+  }
+  #projet article #textProjet {
+    display: none;
+    background-color: #0f3040;
+  }
+  #projet article #textProjet p a {
+    display: inline;
+    padding-left: 10px;
+    text-decoration: underline solid #41ead4;
+    color: #41ead4;
+  }
+  #projet article .filtreBleu {
+    width: 100%;
+    height: 100%;
+    background-color: #41ead48d;
+    transition: all 800ms ease-in-out 600ms;
+  }
+  #projet article:hover #textProjet {
+    display: block;
+    animation: fromBottom 700ms ease-in-out;
+  }
+  #projet article:hover .filtreBleu {
+    background-color: #41ead400;
+  }
+  @keyframes fromBottom {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0%);
+    }
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

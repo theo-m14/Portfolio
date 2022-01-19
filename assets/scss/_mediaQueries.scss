@@ -1,0 +1,171 @@
+@media screen and (min-width:1024px) {
+    //On rajoute de l'espace pour le menu socials fixé
+    header{
+        img{
+            width: 116px;
+        }
+        ul{
+            @include flex;
+            justify-content: space-around;
+            width: 70vw
+        }
+    }
+    main{
+        padding-left: 40px;
+    }
+    //Partie introduction
+    #introduction{
+        h1{
+            font-size: 45px;
+            span{
+                font-size: 32px;
+            }
+        }
+        p:last-of-type{
+            width: 65%;
+        }
+    }
+    //Partie a propos
+    #aPropos{
+        @include flex;
+        #aProposTexte{
+            order: 2;
+            width: 60%;
+            margin-left: 4em;
+            padding-right: 3em;
+        }
+        h2{
+            text-align: right;
+        }
+        p{
+            text-align: right;
+        }
+        //On change l'ordre de la photo
+        #pathPhoto{
+            order: 1;
+        }
+        #pathBorder{
+            left: 110px;
+            top: 120px;
+        }
+    }
+    //Section competences
+    #competences{
+        i{
+            font-size: 42px;
+        }
+        p{
+            font-size: 24px;
+        }
+    }
+    #parcours{
+    }
+    //Section contact
+    #contact{
+        p{
+            width: 52%;
+            margin:2em auto;
+        }
+    }
+    //Partie footer
+    footer{
+        ul{
+            position: fixed;
+            left: 1%;
+            bottom: 10%;
+            flex-direction: column;
+            gap: 1em;
+            &::after{
+                content: '';
+                width: 2px;
+                height: 300px;
+                bottom: -110%;
+                background-color: $thirdColor;
+                position: absolute;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1420px) {
+    header{
+        ul{
+            width: 40vw;
+            padding-right: 1em;        }
+    }
+        #introduction{
+            p:last-of-type{
+                width: 50%;
+            }
+        }
+        #aPropos{
+        justify-content: space-evenly;
+        h2{
+            margin-bottom: 1em;
+        }
+        #aProposTexte{
+            padding-right: 1em;
+            width: 40%;
+        }
+        #pathPhoto{
+        width: 300px;
+        height: 300px;
+        }
+        #pathBorder{
+            width: 300px;
+            height: 300px;
+            top: 5%;
+            left: 15%;
+            #pathBackground{
+                width: 296px;
+                height: 296px;
+            }
+        }
+    }
+    #projet{
+        #projetContainer{
+            display: flex;
+        }
+        .btn{
+                display: none;
+        }
+        article{
+            #textProjet {
+                display: none;
+                background-color: #0f3040;
+                p{
+                    a{
+                        display: inline;
+                        padding-left: 10px;
+                        text-decoration: underline solid $primaryColor;
+                        color: $primaryColor;
+                    }
+                }
+              }
+              .filtreBleu {
+                width: 100%;
+                height: 100%;
+                background-color: #41ead48d;
+                transition: all 800ms ease-in-out 600ms;
+            }
+
+              &:hover #textProjet{
+                  display: block;
+                  animation: fromBottom 700ms ease-in-out;
+              }
+              &:hover .filtreBleu{
+                background-color: #41ead400;
+              }
+
+              @keyframes fromBottom {
+                  from{
+                      transform: translateY(100%);
+                  }
+                  to{
+                      transform: translateY(0%);
+                  }
+              }
+    }
+    }
+        
+}

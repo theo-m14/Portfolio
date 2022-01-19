@@ -5,15 +5,14 @@ header {
   }
   ul {
     @include flex;
-    padding: 1em;
-    width: 45%;
+    padding: 1em 0;
     gap: 5%;
     display: none;
     span {
       color: $primaryColor;
     }
-    a {
-      color: $primaryColor;
+    a{
+      color: white;
     }
   }
 }
