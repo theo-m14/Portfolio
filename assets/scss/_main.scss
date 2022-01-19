@@ -163,7 +163,7 @@ body {
   margin-top: 5em;
   h2 {
     text-align: center;
-    margin-bottom: 2em;
+    margin-bottom: 5em;
   }
   span {
     color: $primaryColor;
@@ -183,14 +183,15 @@ body {
       height: 100%;
       background-color: black;
       margin-right: 2em;
-      left: 15%;
+      left: 59px;
     }
     #texteAnnee {
-      margin-left: 25%;
+      margin-left: 5em;
       padding-right: 5%;
       article {
         margin-bottom: 3em;
         position: relative;
+        //Rond sur la frise
         &::after {
           content: "";
           position: absolute;
@@ -199,16 +200,16 @@ body {
           border-radius: 50%;
           background-color: $thirdColor;
           top: 30%;
-          left: -15.8%;
+          left: -25px;
         }
         p:nth-of-type(2) {
           color: $thirdColor;
         }
         p:first-of-type {
           position: absolute;
-          left: -32%;
+          left: -70px;
           width: 34px;
-          top: 28%;
+          top: 27%;
         }
       }
       h3 {

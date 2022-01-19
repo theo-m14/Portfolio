@@ -243,7 +243,7 @@ body {
 }
 #parcours h2 {
   text-align: center;
-  margin-bottom: 2em;
+  margin-bottom: 5em;
 }
 #parcours span {
   color: #41ead4;
@@ -264,10 +264,10 @@ body {
   height: 100%;
   background-color: black;
   margin-right: 2em;
-  left: 15%;
+  left: 59px;
 }
 #parcours #parcoursContainer #texteAnnee {
-  margin-left: 25%;
+  margin-left: 5em;
   padding-right: 5%;
 }
 #parcours #parcoursContainer #texteAnnee article {
@@ -282,16 +282,16 @@ body {
   border-radius: 50%;
   background-color: #8d99ae;
   top: 30%;
-  left: -15.8%;
+  left: -25px;
 }
 #parcours #parcoursContainer #texteAnnee article p:nth-of-type(2) {
   color: #8d99ae;
 }
 #parcours #parcoursContainer #texteAnnee article p:first-of-type {
   position: absolute;
-  left: -32%;
+  left: -70px;
   width: 34px;
-  top: 28%;
+  top: 27%;
 }
 #parcours #parcoursContainer #texteAnnee h3 {
   font-weight: 300;
@@ -460,6 +460,14 @@ footer p {
   }
   #competences p {
     font-size: 24px;
+  }
+
+  #parcours #parcoursContainer {
+    margin-left: 4em;
+  }
+  #parcours #parcoursContainer #texteAnnee article p:last-of-type {
+    width: 70%;
+    padding-top: 1em;
   }
 
   #contact p {

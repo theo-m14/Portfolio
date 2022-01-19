@@ -59,6 +59,17 @@
         }
     }
     #parcours{
+        #parcoursContainer{
+            margin-left: 4em;
+            #texteAnnee{
+                article{
+                    p:last-of-type{
+                        width: 70%;
+                        padding-top: 1em;
+                    }
+                }
+            }
+        }
     }
     //Section contact
     #contact{
