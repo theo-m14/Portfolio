@@ -10,7 +10,25 @@ let parcoursArray = [
 //fontion qui fait disparaitre la loading page
 setTimeout(()=>{
      document.getElementById('loading').style.display = 'none';
-},1800)
+},1800);
+
+let getBurgerBtn = document.getElementById('burgerButton');
+let getBurger = document.getElementById('burger');
+let getNavBar = document.getElementsByTagName('nav')[0];
+
+getBurger.addEventListener('click', function(){
+    getBurger.classList.toggle('active');
+    getNavBar.classList.toggle('active');
+});
+
+let getLiNavbar = document.querySelectorAll('nav ul li');
+
+//Suppression de l'affichage du menu au click sur les ancres
+getLiNavbar.forEach(li => li.addEventListener('click', function(){
+        getBurger.classList.remove('active');
+        getNavBar.classList.remove('active');
+}));
+
 
 let projetArray = [
     {'name':'test','desc':"Ceci est un test d'ajout de projet",'competence' : ['HTML','CSS','GIT'],'image':'url(assets/images/imageDuSitePortfolio.png)'},

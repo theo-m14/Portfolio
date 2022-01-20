@@ -5,14 +5,115 @@ header {
   }
   ul {
     @include flex;
-    padding: 1em 0;
-    gap: 5%;
-    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    //padding: 1em 0;
+    gap: 25%;
+    //display: none;
+    li{
+      padding-top: 1em;
+      font-size: 20px;
+    }
     span {
       color: $primaryColor;
     }
     a{
       color: white;
     }
+  }
+  nav{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 12;
+    @include flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: black;
+    width: 0%;
+    height: 0vh;
+    overflow: hidden;
+    padding: 0;
+    transition: all 0.3s ease-in-out;
+
+    &.active{
+        width: 100%;
+        height: 100%;
+        padding: 2em 0 0 2em;
+        transition: all 0.3s ease-in-out
+    }
+  }
+  #burgerButton {
+    position: relative;
+    cursor:  pointer;
+    height: 2.5em;
+    transition: all 0.3s ease-in-out;
+    margin-right: 1em;
+  }
+
+  #burger::after, #burger::before {
+      content: "";
+      position: absolute;
+      display: inline-block;
+}
+
+  #burger {
+      position: relative;
+      display: inline-block;
+      top: 20%;
+      transition: all 0.3s ease-in-out;
+      
+      // ANIMATION DE PASSAGE EN CROIX 
+      &.active {
+          position: fixed;
+          background: $primaryColor;
+          height: 2.5em;
+          top:4%;
+          right: 5%;
+          border-radius: 50%;
+          box-shadow: 0px 0px 3px white;
+          transform: translateX(-4vw);
+          z-index: 13;
+
+          &::after, &::before{
+              top:1.05em;
+              left: .25em;
+              background-color: white;
+              box-shadow: 0px 0px 1px white;
+              width: 2em;
+          }
+
+          &::after {
+              transform: rotate(-45deg);
+          }
+
+          &::before {
+              transform: rotate(45deg);
+          }
+      }
+  }
+
+  // STYLE DU BURGER BASIC AVEC AFTER ET BEFORE
+  #burger, #burger::after, #burger::before {
+      width: 2.5em;
+      height: .3em;
+      background-color: white;
+      border-radius: 10px;
+      transition: all 0.5s ease-in-out;
+  }
+
+  // POSITION DE BEFORE ET AFTER
+  #burger::after {
+      top: -10px;
+      left: 0;
+  }
+
+  #burger::before {
+      top: 10px;
+      left: 0;
   }
 }
