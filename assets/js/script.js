@@ -7,6 +7,11 @@ let parcoursArray = [
     {'name' : '<h3><span><</span> Talis Buisness School <span>></span></h3>', 'date':'2022', 'periode' : 'Octobre 2021 - Juillet 2022', 'info' : 'Formation professionnel de Developpeur Web et Web Mobile. À la fin de cette année je serais à l’écoute d’opportunité, comme une embauche direct ou encore une alternance pour monter en compétence. Si aucune de ces opportunités ne se présente je me lancerais en freelance.'}
 ]
 
+//fontion qui fait disparaitre la loading page
+setTimeout(()=>{
+     document.getElementById('loading').style.display = 'none';
+},1800)
+
 let projetArray = [
     {'name':'test','desc':"Ceci est un test d'ajout de projet",'competence' : ['HTML','CSS','GIT'],'image':'url(assets/images/imageDuSitePortfolio.png)'},
     {'name':'test','desc':"Ceci est un test d'ajout de projet",'competence' : ['HTML','CSS','GIT'],'image':'url(assets/images/imageDuSitePortfolio.png)'}

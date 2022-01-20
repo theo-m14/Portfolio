@@ -1,4 +1,17 @@
 @media screen and (min-width:1024px) {
+    #loading{
+        img{
+          width: 420px;
+          left: calc(50% - 210px);
+          top: calc(50% - 210px);
+        }
+        #imageLoader{
+          width: 500px;
+          height: 500px;
+          left: calc(50% - 210px);
+          top: calc(50% - 210px);
+        }
+    }
     //On rajoute de l'espace pour le menu socials fixé
     header{
         img{

@@ -1,3 +1,59 @@
+#loading{
+  position: fixed;
+  z-index: 20;
+  width: 100%;
+  height: 100vh;
+  background-color: $secondaryColor;
+  img{
+    width: 310px;
+    position: absolute;
+    left: calc(50% - 155px);
+    top: calc(50% - 155px);
+  }
+  #imageLoader{
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    background-color: $secondaryColor;
+    left: calc(50% - 155px);
+    top: calc(50% - 155px);
+    animation: mooveloader 2s ease;
+  }
+
+  @keyframes mooveloader {
+    from{
+
+    }
+    15%{
+      transform: translateY(5%)
+    }
+    25%{
+      transform: translateY(20%);
+    }
+    30%{
+      transform: translateY(28%);
+    }
+    37%{
+      transform: translateY(48%);
+    }
+    45%{
+      transform: translateY(57%);
+    }
+    50%{
+      transform: translateY(72%);
+    }
+    71%{
+      transform: translateY(82%);
+    }
+    80%{
+      transform: translateY(94%);
+    }
+    to{
+      transform: translateY(100%);
+    }
+  }
+}
+
 body {
   color: white;
   background-color: $secondaryColor;
