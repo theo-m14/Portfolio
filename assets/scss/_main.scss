@@ -273,7 +273,13 @@ body {
     #textProjet {
       background-color: #0f3040;
       a{
-        display: none
+        padding-left: 10px;
+        text-decoration: underline solid $primaryColor;
+        color: $primaryColor;
+      }
+      h4{
+        color: $primaryColor;
+        font-size: 18px;
       }
     }
     ul {

@@ -1,3 +1,4 @@
+//tableau info parcours
 let parcoursArray = [
     {'name' : '<h3><span><</span> E.Leclerc Limoges <span>></span></h3>', 'date':'2018', 'periode' : 'Février 2018 - Mai 2018', 'info' : 'Après une erreur d’orientation je me mets à travailler dans un E.Leclerc tout en reprenant la programmation en autodidacte avec le language C, bien décidé à en faire mon métier.'},
     {'name' : '<h3><span><</span> Première année de licence informatique <span>></span></h3>', 'date':'2019', 'periode' : 'Septembre 2018 - Juillet 2019', 'info' : 'Je réussis cette première année dans laquelle j’ai utilisé le language processing. J’ai aussi réalisé un projet de groupe sur l’algorithme Ford-Bellman ( recherche du chemin le plus court dans un grapge pondéré et orienté ).'},
@@ -6,11 +7,20 @@ let parcoursArray = [
     {'name' : '<h3><span><</span> Talis Buisness School <span>></span></h3>', 'date':'2022', 'periode' : 'Octobre 2021 - Juillet 2022', 'info' : 'Formation professionnel de Developpeur Web et Web Mobile. À la fin de cette année je serais à l’écoute d’opportunité, comme une embauche direct ou encore une alternance pour monter en compétence. Si aucune de ces opportunités ne se présente je me lancerais en freelance.'}
 ]
 
+let projetArray = [
+    {'name':'test','desc':"Ceci est un test d'ajout de projet",'competence' : ['HTML','CSS','GIT'],'image':'url(assets/images/imageDuSitePortfolio.png)'},
+    {'name':'test','desc':"Ceci est un test d'ajout de projet",'competence' : ['HTML','CSS','GIT'],'image':'url(assets/images/imageDuSitePortfolio.png)'}
+]
+
+let defaultProjectDisplay = []
+
+//Partie parcours
 let getBtnParcours = document.getElementById('btnParcours');
 let getLastAnnee = document.querySelectorAll('#texteAnnee article p:first-of-type')[document.querySelectorAll('#texteAnnee article p:first-of-type').length-1].innerText;
 let getArticleContainer = document.getElementById('texteAnnee');
 let articleText;
 
+//Event sur le bouton parcours
 getBtnParcours.addEventListener('click', function(e){
     e.preventDefault();
     let indexLastAnnee = parcoursArray.findIndex(parcours => parcours.date == getLastAnnee);
@@ -90,4 +100,38 @@ getArrowRight.addEventListener('click',function(){
             default:
         }
     }
-})
+});
+
+//Partie Projet
+ let getBtnProjet = document.getElementById('btnProjet');
+ let allComp;
+ let getProjetContainer = document.getElementById('projetContainer');
+
+ //Ecoute sur le bouton voir plus ou moins
+ getBtnProjet.addEventListener('click',function(e){
+    e.preventDefault();
+    //Si on est dans le cas de voir plus
+    if(getBtnProjet.innerText === 'Voir plus'){
+        //On crée un nouvel article pour contenir le projet pour chaque projet du tableau de stockage
+        for(projet in projetArray){
+            let articleProjet = document.createElement('article');
+            allComp = '';
+            for(competence in projetArray[projet].competence){
+                allComp += `<li>${projetArray[projet].competence[competence]}</li>`;
+            }
+            articleProjet.innerHTML = `<div class="filtreBleu"></div><div id="textProjet"><h4>${projetArray[projet].name}</h4><p>${projetArray[projet].desc}</p><ul>${allComp}</ul></div>`;
+            articleProjet.style.backgroundImage = projetArray[projet].image;
+            getProjetContainer.appendChild(articleProjet);
+        }
+        getBtnProjet.innerText = 'Voir moins';
+    }else{
+        //Sinon on supprime les enfants depuis l'indice 3 des enfants du container des projets ( donc à partir du 4eme)
+        //On stock la longueur initiale du tableau d'enfant car elle sera amené à changer
+        let nbrEnfant = getProjetContainer.children.length;
+        //On parcours le tableau à partir de la fin pour que les indices ne changent pas
+        for(let i = nbrEnfant-1;i>2;i--){
+            getProjetContainer.removeChild(getProjetContainer.children[i]);
+        }
+        getBtnProjet.innerText = 'Voir plus';
+    }
+ });

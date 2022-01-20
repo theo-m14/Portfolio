@@ -136,22 +136,12 @@
     #projet{
         #projetContainer{
             display: flex;
-            .btn{
-                display: none;
-        }
+            flex-wrap: wrap;
         }
         article{
             #textProjet {
                 display: none;
                 background-color: #0f3040;
-                p{
-                    a{
-                        display: inline;
-                        padding-left: 10px;
-                        text-decoration: underline solid $primaryColor;
-                        color: $primaryColor;
-                    }
-                }
               }
               .filtreBleu {
                 width: 100%;

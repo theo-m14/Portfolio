@@ -353,7 +353,13 @@ body {
   background-color: #0f3040;
 }
 #projet article #textProjet a {
-  display: none;
+  padding-left: 10px;
+  text-decoration: underline solid #41ead4;
+  color: #41ead4;
+}
+#projet article #textProjet h4 {
+  color: #41ead4;
+  font-size: 18px;
 }
 #projet article ul {
   display: flex;
@@ -549,19 +555,11 @@ footer p {
 
   #projet #projetContainer {
     display: flex;
-  }
-  #projet #projetContainer .btn {
-    display: none;
+    flex-wrap: wrap;
   }
   #projet article #textProjet {
     display: none;
     background-color: #0f3040;
-  }
-  #projet article #textProjet p a {
-    display: inline;
-    padding-left: 10px;
-    text-decoration: underline solid #41ead4;
-    color: #41ead4;
   }
   #projet article .filtreBleu {
     width: 100%;
