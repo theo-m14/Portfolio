@@ -344,7 +344,7 @@ body {
 }
 #competences h2 {
   text-align: center;
-  margin-bottom: 10em;
+  margin-bottom: 8em;
 }
 #competences p {
   width: min-content;
@@ -383,19 +383,19 @@ body {
   z-index: 3;
 }
 #competences #competencesContainer #competence1 {
-  transform: translate(-380%, -50%);
+  transform: translate(-380%, -90%);
 }
 #competences #competencesContainer #competence2 {
-  transform: translate(-150%, -50%);
+  transform: translate(-150%, -90%);
 }
 #competences #competencesContainer #competence3 {
-  transform: translate(0%, -40%);
+  transform: translate(0%, -80%);
 }
 #competences #competencesContainer #competence4 {
-  transform: translate(150%, -50%);
+  transform: translate(150%, -90%);
 }
 #competences #competencesContainer #competence5 {
-  transform: translate(380%, -50%);
+  transform: translate(380%, -90%);
 }
 #competences i {
   position: absolute;
@@ -518,6 +518,11 @@ body {
 #projet article #textProjet h4 {
   color: #41ead4;
   font-size: 18px;
+  padding: 5px 0;
+}
+#projet article #textProjet p {
+  line-height: 20px;
+  padding-bottom: 5px;
 }
 #projet article ul {
   display: flex;
@@ -668,6 +673,9 @@ footer p {
     top: 120px;
   }
 
+  #competences h2 {
+    margin-bottom: 10em;
+  }
   #competences i {
     font-size: 42px;
   }

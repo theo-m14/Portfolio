@@ -31,8 +31,8 @@ getLiNavbar.forEach(li => li.addEventListener('click', function(){
 
 
 let projetArray = [
-    {'name':'test','desc':"Ceci est un test d'ajout de projet",'competence' : ['HTML','CSS','GIT'],'image':'url(assets/images/imageDuSitePortfolio.png)'},
-    {'name':'test','desc':"Ceci est un test d'ajout de projet",'competence' : ['HTML','CSS','GIT'],'image':'url(assets/images/imageDuSitePortfolio.png)'}
+    {'name':'test','desc':"Ceci est un test d'ajout de projet",'competence' : ['HTML','CSS','GIT'],'image':'url(assets/images/ImageDuSitePortfolio.png)'},
+    {'name':'test','desc':"Ceci est un test d'ajout de projet",'competence' : ['HTML','CSS','GIT'],'image':'url(assets/images/ImageDuSitePortfolio.png)'}
 ]
 
 let defaultProjectDisplay = []

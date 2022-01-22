@@ -173,7 +173,7 @@ body {
   margin-top: 5em;
   h2 {
     text-align: center;
-    margin-bottom: 10em;
+    margin-bottom: 8em;
   }
   p {
     width: min-content;
@@ -209,19 +209,19 @@ body {
       z-index: 3;
     }
     #competence1{
-      transform: translate(-380%,-50%);
+      transform: translate(-380%,-90%);
     }
     #competence2{
-      transform: translate(-150%,-50%);
+      transform: translate(-150%,-90%);
     }
     #competence3{
-      transform: translate(0%,-40%);
+      transform: translate(0%,-80%);
     }
     #competence4{
-      transform: translate(150%,-50%);
+      transform: translate(150%,-90%);
     }
     #competence5{
-      transform: translate(380%,-50%);
+      transform: translate(380%,-90%);
     }
   }
   i {
@@ -345,6 +345,11 @@ body {
       h4{
         color: $primaryColor;
         font-size: 18px;
+        padding: 5px 0;
+      }
+      p{
+        line-height: 20px;
+        padding-bottom: 5px
       }
     }
     ul {
