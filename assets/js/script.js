@@ -79,7 +79,7 @@ getArrowLeft.addEventListener('click',function(){
         let id = getAllCompetence[image].id;
         switch (id){
             case 'competence1':
-                getAllCompetence[image].id = 'competence5';
+                getAllCompetence[image].id = 'competence7';
                 break;
             case 'competence2':
                 getAllCompetence[image].id = 'competence1';
@@ -89,11 +89,17 @@ getArrowLeft.addEventListener('click',function(){
                 break;
             case 'competence4':
                 getAllCompetence[image].id = 'competence3';
-                displayCompetenceText.innerText = getAllCompetence[image].alt;
                 break;
             case 'competence5':
                 getAllCompetence[image].id = 'competence4';
+                displayCompetenceText.innerText = getAllCompetence[image].alt;
                 break;
+            case 'competence6':
+                getAllCompetence[image].id = 'competence5';
+                break;
+            case 'competence7':
+                getAllCompetence[image].id = 'competence6';
+                break;            
             default:
         }
     }
@@ -108,17 +114,22 @@ getArrowRight.addEventListener('click',function(){
                 break;
             case 'competence2':
                 getAllCompetence[image].id = 'competence3';
-                displayCompetenceText.innerText = getAllCompetence[image].alt;
                 break;
             case 'competence3':
                 getAllCompetence[image].id = 'competence4';
+                displayCompetenceText.innerText = getAllCompetence[image].alt;
                 break;
             case 'competence4':
                 getAllCompetence[image].id = 'competence5';
                 break;
             case 'competence5':
+                getAllCompetence[image].id = 'competence6';
+                break;
+            case 'competence6':
+                getAllCompetence[image].id = 'competence7'
+                break;
+            case 'competence7':
                 getAllCompetence[image].id = 'competence1';
-
                 break;
             default:
         }
@@ -158,3 +169,16 @@ getArrowRight.addEventListener('click',function(){
         getBtnProjet.innerText = 'Voir plus';
     }
  });
+
+const getProgressBar = document.querySelector('.scrollbar');
+
+let totalHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+window.addEventListener('scroll', () => {
+
+  let progress = (document.documentElement.scrollTop / totalHeight) * 100;
+  getProgressBar.style.height = `${progress}%`;
+  getProgressBar.style.opacity = `${progress}%`;
+
+
+})

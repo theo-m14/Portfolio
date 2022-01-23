@@ -303,7 +303,7 @@ body {
   background-image: url(../images/photoThéo.jpg);
   background-size: cover;
   clip-path: polygon(16% 0, 100% 0%, 84% 100%, 0% 100%);
-  background-position: center;
+  background-position: calc(50% - 12px);
   width: 200px;
   height: 200px;
   position: relative;
@@ -313,11 +313,13 @@ body {
 #aPropos #pathPhoto .filtreBleu {
   width: 100%;
   height: 100%;
-  background-color: #41ead48d;
+  background-color: #41ead460;
   transition: all 400ms ease-in-out;
 }
 #aPropos #pathPhoto .filtreBleu:hover {
   background-color: #41ead400;
+  box-sizing: border-box;
+  border-bottom: solid #41ead4 2px;
 }
 #aPropos #pathBorder {
   position: absolute;
@@ -365,37 +367,54 @@ body {
   position: absolute;
   transition: all 1s ease-in-out;
 }
-#competences #competencesContainer #competence1,
-#competences #competencesContainer #competence5 {
+#competences #competencesContainer #competence2,
+#competences #competencesContainer #competence6 {
   width: 10%;
   max-width: 78px;
   z-index: 1;
 }
-#competences #competencesContainer #competence2,
-#competences #competencesContainer #competence4 {
+#competences #competencesContainer #competence3,
+#competences #competencesContainer #competence5 {
   width: 15%;
   max-width: 117px;
   z-index: 2;
 }
-#competences #competencesContainer #competence3 {
+#competences #competencesContainer #competence4 {
   width: 20%;
   max-width: 156px;
   z-index: 3;
 }
+#competences #competencesContainer #competence1, #competences #competencesContainer #competence7 {
+  width: 5%;
+  max-width: 40px;
+  z-index: 5;
+}
 #competences #competencesContainer #competence1 {
-  transform: translate(-380%, -90%);
+  transform: translate(-910%, -90%);
+  opacity: 0.4;
 }
 #competences #competencesContainer #competence2 {
-  transform: translate(-150%, -90%);
+  transform: translate(-360%, -90%);
+  opacity: 0.6;
 }
 #competences #competencesContainer #competence3 {
-  transform: translate(0%, -80%);
+  transform: translate(-150%, -90%);
+  opacity: 0.7;
 }
 #competences #competencesContainer #competence4 {
-  transform: translate(150%, -90%);
+  transform: translate(0%, -80%);
 }
 #competences #competencesContainer #competence5 {
-  transform: translate(380%, -90%);
+  transform: translate(150%, -90%);
+  opacity: 0.7;
+}
+#competences #competencesContainer #competence6 {
+  transform: translate(360%, -90%);
+  opacity: 0.6;
+}
+#competences #competencesContainer #competence7 {
+  transform: translate(910%, -90%);
+  opacity: 0.4;
 }
 #competences i {
   position: absolute;
@@ -607,6 +626,16 @@ footer p {
     top: calc(50% - 210px);
   }
 
+  .scrollbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 0;
+    opacity: 0;
+    background: linear-gradient(to bottom, #9df4e9, #41ead4);
+  }
+
   header img {
     width: 116px;
   }
@@ -674,7 +703,7 @@ footer p {
   }
 
   #competences h2 {
-    margin-bottom: 10em;
+    margin-bottom: 13em;
   }
   #competences i {
     font-size: 42px;
