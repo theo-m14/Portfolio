@@ -112,6 +112,15 @@
             }
         }
     }
+    #projet{
+        #projetContainer{
+            display: flex;
+            flex-wrap: wrap;
+            width: 90%;
+            margin: auto;
+            gap: 1%;
+        }
+    }
     //Section contact
     #contact{
         p{
@@ -175,10 +184,6 @@
         }
     }
     #projet{
-        #projetContainer{
-            display: flex;
-            flex-wrap: wrap;
-        }
         article{
             #textProjet {
                 display: none;

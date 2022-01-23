@@ -720,6 +720,14 @@ footer p {
     padding-top: 1em;
   }
 
+  #projet #projetContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
+    gap: 1%;
+  }
+
   #contact p {
     width: 52%;
     margin: 2em auto;
@@ -775,10 +783,6 @@ footer p {
     height: 296px;
   }
 
-  #projet #projetContainer {
-    display: flex;
-    flex-wrap: wrap;
-  }
   #projet article #textProjet {
     display: none;
     background-color: #0f3040;
